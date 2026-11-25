@@ -3,14 +3,55 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Simple Starter</title>
+  <title>Profile Card</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <main class="card">
-    <h1>Hello, World!</h1>
-    <p id="status">HTML, CSS, and JavaScript are linked.</p>
-    <button id="action-btn" type="button">Click me (0)</button>
+  <main class="card" aria-labelledby="profile-name">
+    <div class="avatar-frame">
+      <img
+        id="profile-image"
+        class="avatar"
+        src="src/john.png"
+        alt="Male profile portrait of John"
+      />
+    </div>
+
+    <div class="profile-info">
+      <h1 id="profile-name">John</h1>
+      <p class="profile-role">Product Designer</p>
+      <p class="profile-bio">
+        Description of the person.
+      </p>
+    </div>
+
+    <div class="selector-section">
+      <span class="selector-label" id="gender-selector-label">Profile Image</span>
+      <div
+        class="gender-switch"
+        role="group"
+        aria-labelledby="gender-selector-label"
+      >
+        <button
+          id="btn-male"
+          type="button"
+          class="switch-btn is-active"
+          data-gender="male"
+          aria-pressed="true"
+        >
+          Male
+        </button>
+        <button
+          id="btn-female"
+          type="button"
+          class="switch-btn"
+          data-gender="female"
+          aria-pressed="false"
+        >
+          Female
+        </button>
+      </div>
+    </div>
   </main>
 
   <script src="script.js"></script>
